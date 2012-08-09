@@ -33,6 +33,8 @@ namespace WPFClock
         {
             InitializeComponent();
 
+            this.Title = "Time on " + Environment.MachineName;
+
             this.DataContext = this;
 
             tmr = new Timer(new TimerCallback((x) =>
