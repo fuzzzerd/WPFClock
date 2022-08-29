@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFClock", "WPFClock\WPFClock.csproj", "{79558B4A-2BFC-403A-98F2-9EDA335FFF3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFClock", "WPFClock.csproj", "{79558B4A-2BFC-403A-98F2-9EDA335FFF3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
