@@ -2,6 +2,8 @@
 using System.Windows;
 using System.ComponentModel;
 using System.Threading;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace WPFClock;
 
@@ -10,11 +12,23 @@ namespace WPFClock;
 /// </summary>
 public partial class MainWindow : Window, INotifyPropertyChanged
 {
-    public String _TheCurrenTimeString;
-    public String TheCurrenTimeString
+    public String _TheCurrentTimeString;
+    public String TheCurrentTimeString
     {
-        get { return _TheCurrenTimeString; }
-        set { _TheCurrenTimeString = value; OnPropertyChanged("TheCurrenTimeString"); }
+        get { return _TheCurrentTimeString; }
+        set { _TheCurrentTimeString = value; OnPropertyChanged(nameof(TheCurrentTimeString)); }
+    }
+
+    public String AppTitle 
+    {
+        get
+        {
+            var assemblyLocation = Assembly.GetExecutingAssembly().Location;
+            var versionInfo = FileVersionInfo.GetVersionInfo(assemblyLocation);
+            var productVersion = versionInfo.ProductVersion;
+
+            return $"{Environment.MachineName} ({productVersion})";
+        }
     }
 
     Timer tmr;
@@ -26,7 +40,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         tmr = new Timer(new TimerCallback((x) =>
         {
-            TheCurrenTimeString = DateTime.Now.ToLongTimeString();
+            TheCurrentTimeString = DateTime.Now.ToLongTimeString();
         }));
 
         tmr.Change(0, 500);
