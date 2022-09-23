@@ -4,7 +4,6 @@
     <OutputType>WinExe</OutputType>
     <MapFileExtensions>true</MapFileExtensions>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
@@ -17,6 +16,7 @@
   <PropertyGroup>
     <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
     <MinVerTagPrefix>v</MinVerTagPrefix>
+    <MinVerDefaultPreReleasePhase>beta</MinVerDefaultPreReleasePhase>
     <MinVerVerbosity>minimal</MinVerVerbosity> <!-- diagnostic -->
   </PropertyGroup>
 

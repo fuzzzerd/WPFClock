@@ -23,7 +23,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     {
         get
         {
-            var assemblyLocation = Assembly.GetExecutingAssembly().Location;
+            var assemblyLocation = Assembly.GetEntryAssembly().Location;
             var versionInfo = FileVersionInfo.GetVersionInfo(assemblyLocation);
             var productVersion = versionInfo.ProductVersion;
 
