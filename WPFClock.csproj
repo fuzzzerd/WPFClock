@@ -21,6 +21,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Resource Include="noun-digital-clock-3183455.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="minver" Version="4.2.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

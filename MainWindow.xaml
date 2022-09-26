@@ -8,7 +8,8 @@
     Width="450"
     ResizeMode="NoResize" 
     WindowStartupLocation="CenterScreen"
-    WindowStyle="SingleBorderWindow" 
+    WindowStyle="ToolWindow"
+    Icon="noun-digital-clock-3183455.png"
     Background="{Binding Source={x:Static SystemParameters.WindowGlassBrush}}">
     <Grid Margin="2" Background="White">
         <Grid Margin="4" >
